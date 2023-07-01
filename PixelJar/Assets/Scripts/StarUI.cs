@@ -19,6 +19,6 @@ public class StarUI : MonoBehaviour
 
     public void SetStarPercentage(float percentage)
     {
-        this.GetComponent<Image>().fillAmount = percentage;
+        this.transform.Find("StarFill").gameObject.GetComponent<Image>().fillAmount = percentage;
     }
 }

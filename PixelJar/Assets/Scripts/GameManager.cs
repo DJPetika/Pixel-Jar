@@ -39,12 +39,11 @@ public class GameManager : MonoBehaviour {
     void Start() {
         curHealth = maxHealth;
         coinCount = 500;
-        UpdateGameState(GameState.Play);
+        UpdateGameState(GameState.Night);
     }
 
     void Update(){
         //update coin count display
-        TriggerEvent("UpdateWallet");
         //update health count display + check for loss
         //update timer
         time += Time.deltaTime;
@@ -106,7 +105,6 @@ public class GameManager : MonoBehaviour {
 
     private void HandleStart()
     {
-        UpdateGameState(GameState.Night);
     }
 
     private void HandlePause(){
@@ -115,7 +113,6 @@ public class GameManager : MonoBehaviour {
 
     private void HandlePlay()
     {
-        UpdateGameState(GameState.Night);
     }
 
     private void HandleDay(){
@@ -166,9 +163,17 @@ public class GameManager : MonoBehaviour {
     public void TriggerEvent(string eventName)
     {
         UnityEvent thisEvent = null;
-        if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        Debug.Log("EVENT TRIGGERED: " + eventName);
+        try
         {
-            thisEvent.Invoke();
+            if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+            {
+                thisEvent.Invoke();
+            }
+        }
+        catch
+        {
+            Debug.Log("Event Doesn't Exist.");
         }
     }
 }

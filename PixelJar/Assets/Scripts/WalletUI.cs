@@ -17,8 +17,9 @@ public class WalletUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        WalletText.text = GameManager.instance.coinCount.ToString("D9");
     }
+
     public void UpdateWallet()
     {
         WalletText.text = GameManager.instance.coinCount.ToString("D9");

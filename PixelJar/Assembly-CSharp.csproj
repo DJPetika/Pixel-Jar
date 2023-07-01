@@ -56,16 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\StarUI.cs" />
     <Compile Include="Assets\Scripts\ScaleGrid.cs" />
     <Compile Include="Assets\Scripts\Factory.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Object.cs" />
-    <Compile Include="Assets\Scripts\Actor.cs" />
     <Compile Include="Assets\Scripts\AnimatorToggle.cs" />
     <Compile Include="Assets\Scripts\HitPointsController.cs" />
-    <Compile Include="Assets\Scripts\StarUI.cs" />
-    <Compile Include="Assets\Scripts\WalletUI.cs" />
     <Compile Include="Assets\Scripts\ClockUI.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Object.cs" />
+    <Compile Include="Assets\Scripts\WalletUI.cs" />
+    <Compile Include="Assets\Scripts\Actor.cs" />
+    <Compile Include="Assets\Scripts\ScrollbarButtonInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
