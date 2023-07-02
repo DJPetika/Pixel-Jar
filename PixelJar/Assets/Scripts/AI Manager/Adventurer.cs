@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// This is a template class for moving & path finding in game actors.
-/// </summary>
-public class Actor : MonoBehaviour
+public class Adventurer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
