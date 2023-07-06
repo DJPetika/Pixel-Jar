@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+        "Name": "Hole",
+        "Cost": 100,
+        "ShortDescription": "A hole in the ground.",
+        "LongDescription": "",
+        "ImagePath": "PlaceHolders/Hole",
+        "PrefabPath": ""
+    },
+    {
+        "Name": "Treasure Chest",
+        "Cost": 1000,
+        "ShortDescription": "A pile of gold will light up any space.",
+        "LongDescription": "",
+        "ImagePath": "PlaceHolders/Chest_Open",
+        "PrefabPath": ""
+    }
+  ]
+}
