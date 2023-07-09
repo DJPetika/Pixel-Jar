@@ -67,10 +67,13 @@
     <Compile Include="Assets\Scripts\AI Manager\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AI Manager\Monster.cs" />
-    <Compile Include="Assets\Scripts\Object.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\AI Manager\Adventurer.cs" />
     <Compile Include="Assets\Scripts\WalletUI.cs" />
+    <Compile Include="Assets\Scripts\UILayerManager.cs" />
     <Compile Include="Assets\Scripts\GameStore.cs" />
+    <Compile Include="Assets\Scripts\SFXManager.cs" />
+    <Compile Include="Assets\Scripts\Conditional.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -21,8 +21,18 @@ public class AnimatorToggle : MonoBehaviour
     public void Toggle()
     {
         bool hold = _AnimatorToggle.GetBool("Toggle");
+        GameManager.instance.TriggerEvent("Toggle");
 
         hold = !hold;
+        
+        if(hold == true)
+        {
+            GameManager.instance.TriggerEvent("StoreOpened");
+        }
+        else
+        {
+            GameManager.instance.TriggerEvent("StoreClosed");
+        }
 
         _AnimatorToggle.SetBool("Toggle", hold);
     }

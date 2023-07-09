@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 [Serializable]
 public class GameStoreJSON
 {
-    public StoreItemJSON[] items;
+    public List<StoreItemJSON> items;
 }
 
 /// <summary>
@@ -33,13 +34,18 @@ public class GameStore : MonoBehaviour
 
     public void UpdateStoreItems()
     {
-        foreach (Transform child in this.transform.Find("Display").Find("Items")) { DestroyImmediate(child.gameObject); }
+        Transform itemsParent = this.transform.Find("Display").Find("Items");
+        while (itemsParent.childCount > 0)
+        {
+            DestroyImmediate(itemsParent.GetChild(0).gameObject); 
+        }
+        items.Clear();
 
         GameStoreJSON StoreItemsInJSON = JsonUtility.FromJson<GameStoreJSON>(GameStorejsonFile.text);
 
         foreach (StoreItemJSON item in StoreItemsInJSON.items)
         {
-            GameObject newItem = (GameObject)Instantiate(ItemDisplayPrefab, this.transform.Find("Display").Find("Items"));
+            GameObject newItem = (GameObject)Instantiate(ItemDisplayPrefab, itemsParent);
             newItem.GetComponent<StoreItem>().overloadItem(item);
             items.Add(newItem.GetComponent<StoreItem>());
         }

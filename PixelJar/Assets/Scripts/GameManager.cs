@@ -176,6 +176,23 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Event Doesn't Exist.");
         }
     }
+
+    public bool SpendMoney(int amount)
+    {
+        if(amount <= this.coinCount)
+        {
+            this.coinCount -= amount;
+            this.TriggerEvent("Purchase");
+
+            return true;
+        }
+        else
+        {
+            this.TriggerEvent("DeniedPurchase");
+
+            return false;
+        }
+    }
 }
 
 public enum GameState {

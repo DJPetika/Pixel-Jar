@@ -32,7 +32,7 @@ public class StoreItem : MonoBehaviour
     private string ShortDescription;
     private string LongDescription;
     private Sprite Image;
-    private UnityEngine.Object Prefab;
+    private GameObject Prefab;
 
     public void overloadItem(StoreItemJSON overload)
     {
@@ -57,11 +57,20 @@ public class StoreItem : MonoBehaviour
 
         try
         {
-            this.Prefab = Resources.Load(overload.PrefabPath);
+            this.Prefab = Resources.Load<GameObject>(overload.PrefabPath);
         }
         catch (Exception ex)
         {
             Debug.LogError("Failed to load prefab at path: " + overload.PrefabPath + " Error: " + ex);
+        }
+    }
+
+    public void Purchase()
+    {
+        if(GameManager.instance.SpendMoney(Cost))
+        {
+            GameObject obj = Instantiate(this.Prefab, GameObject.Find("GameGrid").transform);
+            obj.GetComponent<Trap>().Purchased();
         }
     }
 }

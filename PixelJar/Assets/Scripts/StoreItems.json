@@ -6,7 +6,7 @@
         "ShortDescription": "A hole in the ground.",
         "LongDescription": "",
         "ImagePath": "PlaceHolders/Hole",
-        "PrefabPath": ""
+        "PrefabPath": "Prefabs/Hole"
     },
     {
         "Name": "Treasure Chest",
@@ -14,7 +14,7 @@
         "ShortDescription": "A pile of gold will light up any space.",
         "LongDescription": "",
         "ImagePath": "PlaceHolders/Chest_Open",
-        "PrefabPath": ""
+        "PrefabPath": "Prefabs/Chest"
     }
   ]
 }
