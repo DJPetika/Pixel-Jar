@@ -25,6 +25,8 @@ public class SpawnManager : MonoBehaviour
 
     public int maxMonsters = 10;
     public int maxAdventurers = 10;
+
+    public List<Transform> SpawnPoints;
     
     public int MonsterCount => GameObject.FindObjectsOfType<Monster>().Length;
     public int AdventureCount => GameObject.FindObjectsOfType<Adventurer>().Length;
@@ -81,11 +83,14 @@ public class SpawnManager : MonoBehaviour
         {
             if (isMonsterSpawnEnabled)
             {
-                Vector3 randomPosition = new Vector3(
-                    Random.Range(minPosition.position.x, maxPosition.position.x),
-                    Random.Range(minPosition.position.y, maxPosition.position.y),
-                    0
-                );
+                // Vector3 randomPosition = new Vector3(
+                //     Random.Range(minPosition.position.x, maxPosition.position.x),
+                //     Random.Range(minPosition.position.y, maxPosition.position.y),
+                //     maxPosition.position.z
+                // );
+
+                Vector3 randomPosition = this.SpawnPoints[Random.Range(0, this.SpawnPoints.Count)].position;
+
                 Instantiate(monsterPrefab, randomPosition, Quaternion.identity);
             }
             yield return new WaitForSeconds(spawnTimer);
@@ -98,11 +103,14 @@ public class SpawnManager : MonoBehaviour
         {
             if (isAdventurerSpawnEnabled)
             {
-                Vector3 randomPosition = new Vector3(
-                    Random.Range(minPosition.position.x, maxPosition.position.x),
-                    Random.Range(minPosition.position.y, maxPosition.position.y),
-                    0
-                );
+                // Vector3 randomPosition = new Vector3(
+                //     Random.Range(minPosition.position.x, maxPosition.position.x),
+                //     Random.Range(minPosition.position.y, maxPosition.position.y),
+                //     maxPosition.position.z
+                // );
+
+                Vector3 randomPosition = this.SpawnPoints[Random.Range(0, this.SpawnPoints.Count)].position;
+
                 Instantiate(adventurerPrefab, randomPosition, Quaternion.identity);
             }
             yield return new WaitForSeconds(spawnTimer);

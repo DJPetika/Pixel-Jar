@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour {
 
     //inventory?
 
+    public GameObject FrontDesk;
+
     void Awake() {
         MakeSingleton();
     }
