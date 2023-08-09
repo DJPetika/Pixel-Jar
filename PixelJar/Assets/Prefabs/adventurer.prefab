@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4217277222211090847}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6276, y: 1.6276, z: 1.6276}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4650264469669882164}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26d86d491e5a13d49a9ce853710d7053, type: 3}
+  m_Sprite: {fileID: 762687791, guid: 8b03b81a2c432634499c0f8a53296868, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 8023282090714453336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4738563564811429431}
@@ -133,6 +133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NMA: {fileID: 0}
+  stats:
+    damageVal: 1
+    health: 2
+    speed: 2
+    defaultSpeed: 0
+    detectRange: 0
 --- !u!195 &9114710122804126192
 NavMeshAgent:
   m_ObjectHideFlags: 0

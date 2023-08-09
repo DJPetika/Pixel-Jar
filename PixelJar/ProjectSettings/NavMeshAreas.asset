@@ -12,11 +12,11 @@ NavMeshProjectSettings:
   - name: Jump
     cost: 2
   - name: Rough
+    cost: 99
+  - name: Hazard
     cost: 2
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
+  - name: Treasure
+    cost: -10
   - name: 
     cost: 1
   - name: 

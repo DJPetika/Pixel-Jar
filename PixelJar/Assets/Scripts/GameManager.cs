@@ -1,7 +1,9 @@
+using NavMeshPlus.Components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour {
     //inventory?
 
     public GameObject FrontDesk;
+    private NavMeshSurface navmesh;
 
     void Awake() {
         MakeSingleton();
@@ -42,6 +45,8 @@ public class GameManager : MonoBehaviour {
         curHealth = maxHealth;
         coinCount = 500;
         UpdateGameState(GameState.Night);
+        this.navmesh = this.GetComponent<NavMeshSurface>();
+        this.StartListening("TrapPlaced", delegate () { this.navmesh.BuildNavMesh(); });
     }
 
     void Update(){

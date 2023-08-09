@@ -9,7 +9,7 @@
         "PrefabPath": "Prefabs/Traps/Hole"
     },
     {
-        "Name": "Treasure Chest",
+        "Name": "Treasure",
         "Cost": 1000,
         "ShortDescription": "A pile of gold will light up any space.",
         "LongDescription": "",

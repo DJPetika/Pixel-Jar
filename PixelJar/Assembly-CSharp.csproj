@@ -57,14 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\StarUI.cs" />
+    <Compile Include="Assets\Scripts\FrontDesk.cs" />
     <Compile Include="Assets\Scripts\ScaleGrid.cs" />
     <Compile Include="Assets\Scripts\Factory.cs" />
     <Compile Include="Assets\Scripts\ScrollbarButtonInterface.cs" />
     <Compile Include="Assets\Scripts\Conditional.cs" />
     <Compile Include="Assets\Scripts\AnimatorToggle.cs" />
     <Compile Include="Assets\Scripts\StoreItem.cs" />
+    <Compile Include="Assets\Scripts\Hole.cs" />
     <Compile Include="Assets\Scripts\HitPointsController.cs" />
-    <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\ClockUI.cs" />
     <Compile Include="Assets\Scripts\AI Manager\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -73,10 +74,8 @@
     <Compile Include="Assets\Scripts\AI Manager\Adventurer.cs" />
     <Compile Include="Assets\Scripts\SFXManager.cs" />
     <Compile Include="Assets\Scripts\WalletUI.cs" />
-    <Compile Include="Assets\Scripts\HeroController.cs" />
     <Compile Include="Assets\Scripts\UILayerManager.cs" />
     <Compile Include="Assets\Scripts\GameStore.cs" />
-    <Compile Include="Assets\Scripts\FrontDesk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
